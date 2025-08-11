@@ -1,8 +1,11 @@
 class CartPage {
-  get checkoutBtn() { return $('#checkout'); }
-  async removeByName(name) {
-    const row = await $(`//div[@class="inventory_item_name" and text()="${name}"]/ancestor::div[@class="cart_item"]`);
-    await row.$('button').click();
-  }
+    get checkoutBtn() { return $('#checkout'); }
+
+    async removeByName(name) {
+        const item = await $(`.cart_item:has(.inventory_item_name=${name})`);
+        const btn = await item.$('button.cart_button');
+        await btn.click();
+    }
 }
-module.exports = new CartPage();
+
+export default new CartPage();

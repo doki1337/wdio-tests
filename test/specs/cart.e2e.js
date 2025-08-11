@@ -1,7 +1,6 @@
-const LoginPage = require('../pageobjects/login.page');
-const InventoryPage = require('../pageobjects/inventory.page');
-const CartPage = require('../pageobjects/cart.page');
-
+import InventoryPage from '../pageobjects/inventory.page.js';
+import LoginPage from '../pageobjects/login.page.js';
+import CartPage from '../pageobjects/cart.page.js';
 describe('Cart', () => {
   beforeEach(async () => {
     await LoginPage.open();
@@ -10,9 +9,6 @@ describe('Cart', () => {
     await InventoryPage.addToCartByName('Sauce Labs Bike Light');
     await InventoryPage.openCart();
   });
-
-  beforeEach(async () => { await browser.reloadSession(); });
-afterEach(async () => { await browser.reloadSession(); });
 
 
   it('removes item from cart', async () => {

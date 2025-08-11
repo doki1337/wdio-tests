@@ -1,15 +1,8 @@
-const assert = require('assert');
-const LoginPage = require('../pageobjects/login.page');
-
+import LoginPage from '../pageobjects/login.page.js';
 describe('Login', () => {
   beforeEach(async () => {
     await LoginPage.resetState();
   });
-
- beforeEach(async () => { await browser.reloadSession(); });
-afterEach(async () => { await browser.reloadSession(); });
-
-
   it('locked_out_user cannot login', async () => {
     await LoginPage.login('locked_out_user', 'secret_sauce');
 

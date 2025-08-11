@@ -1,9 +1,9 @@
 // test/specs/checkout.e2e.js
-const assert = require('assert');
-const LoginPage = require('../pageobjects/login.page');
-const InventoryPage = require('../pageobjects/inventory.page');
-const CartPage = require('../pageobjects/cart.page');
-const CheckoutPage = require('../pageobjects/checkout.page');
+import assert from 'assert';
+import LoginPage from '../pageobjects/login.page.js';
+import InventoryPage from '../pageobjects/inventory.page.js';
+import CartPage from '../pageobjects/cart.page.js';
+import CheckoutPage from '../pageobjects/checkout.page.js';
 
 describe('Checkout flow', () => {
   beforeEach(async () => {

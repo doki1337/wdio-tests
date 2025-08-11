@@ -1,5 +1,5 @@
-const LoginPage = require('../pageobjects/login.page');
-const InventoryPage = require('../pageobjects/inventory.page');
+import InventoryPage from '../pageobjects/inventory.page.js';
+import LoginPage from '../pageobjects/login.page.js';
 
 describe('Inventory', () => {
   beforeEach(async () => {
@@ -8,10 +8,6 @@ describe('Inventory', () => {
     await InventoryPage.waitReady();
   });
 
- beforeEach(async () => { await browser.reloadSession(); });
-afterEach(async () => { await browser.reloadSession(); });
-
-
   it('adds two items and shows badge = 2', async () => {
     await InventoryPage.addToCartByName('Sauce Labs Backpack');
     await InventoryPage.addToCartByName('Sauce Labs Bike Light');
@@ -19,7 +15,7 @@ afterEach(async () => { await browser.reloadSession(); });
   });
 
   it('sorts by price low->high', async () => {
-    await InventoryPage.sortBy('lohi');
+    await InventoryPage.sortBy('Price (low to high)');
     await expect(InventoryPage.title).toHaveText('Products');
   });
 });
