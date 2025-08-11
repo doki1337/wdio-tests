@@ -1,0 +1,11 @@
+[34928:28408:0811/034619.250:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[22552:21356:0811/034619.335:INFO:third_party\webrtc\rtc_base\cpu_info.cc:88] Available number of cores: 12
+[3468:16928:0811/034619.407:INFO:third_party\webrtc\rtc_base\cpu_info.cc:88] Available number of cores: 12
+[31076:13388:0811/034619.517:VERBOSE1:components\viz\service\main\viz_main_impl.cc:86] VizNullHypothesis is disabled (not a warning)
+[33664:20180:0811/034619.700:INFO:third_party\webrtc\rtc_base\cpu_info.cc:88] Available number of cores: 12
+[34928:28408:0811/034619.734:INFO:CONSOLE:987] "Launching Mapper instance with selfTargetId: B803425F44974A20BDBDA4474A305E31", source:  (987)
+[34380:34016:0811/034619.833:INFO:third_party\webrtc\rtc_base\cpu_info.cc:88] Available number of cores: 12
+[34928:28408:0811/034619.877:INFO:CONSOLE:0] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://www.saucedemo.com/ (0)
+[34928:28408:0811/034619.944:INFO:CONSOLE:0] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://www.saucedemo.com/ (0)
+[34928:28408:0811/034621.454:ERROR:components\device_event_log\device_event_log_impl.cc:198] [03:46:21.455] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Элемент не найден. (0x490)
+[34928:30844:0811/034621.587:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
