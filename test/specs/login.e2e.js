@@ -1,19 +1,18 @@
-import LoginPage from '../pageobjects/login.page.js';
+import { expect } from '@wdio/globals';
+import loginPage from '../pageobjects/login.page.js';
+
 describe('Login', () => {
-  beforeEach(async () => {
-    await LoginPage.resetState();
-  });
-  it('locked_out_user cannot login', async () => {
-    await LoginPage.login('locked_out_user', 'secret_sauce');
+    beforeEach(async () => {
+        await loginPage.resetState();
+    });
 
-    await LoginPage.error.waitForDisplayed({ timeout: 7000 });
-    const txt = await LoginPage.error.getText();
-    assert.ok(
-      txt.includes('Sorry, this user has been locked out'),
-      `Unexpected error text: "${txt}"`
-    );
+    it('locked_out_user cannot login', async () => {
+        await loginPage.login('locked_out_user', 'secret_sauce');
+        await loginPage.errorMsg.waitForDisplayed({ timeout: 7000 });
+        const txt = await loginPage.errorMsg.getText();
+        expect(txt).toContain('Sorry, this user has been locked out');
 
-    const url = await browser.getUrl();
-    assert.ok(!url.includes('inventory'), `Should NOT navigate to inventory, got: ${url}`);
-  });
+        const url = await browser.getUrl();
+        expect(url).not.toContain('inventory');
+    });
 });

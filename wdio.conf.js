@@ -1,10 +1,10 @@
 export const config = {
   runner: 'local',
+  maxInstances: 1,
   specs: ['./test/specs/**/*.js'],
   baseUrl: 'https://www.saucedemo.com',
   capabilities: [{
     browserName: 'chrome',
-    maxInstances: 1,
     'goog:chromeOptions': {
       args: [
         '--disable-search-engine-choice-screen',
@@ -30,5 +30,5 @@ export const config = {
   mochaOpts: {
     ui: 'bdd',
     timeout: 60000
-  },
+  }
 }
