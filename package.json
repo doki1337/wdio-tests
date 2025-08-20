@@ -13,5 +13,8 @@
     "chromedriver": "139.0.0",
     "wdio-chromedriver-service": "^8.1.1",
     "webdriverio": "^9.19.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0"
   }
 }

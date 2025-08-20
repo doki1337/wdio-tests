@@ -6,7 +6,12 @@ class LoginPage extends Page {
     get loginBtn()   { return $('#login-button'); }
     get errorMsg() { return $('.error-message-container.error'); }
 
+    async open() {
+        await browser.url('https://www.saucedemo.com/');
+    }
+
     async login(user, pass) {
+        await this.username.waitForDisplayed();
         await this.username.clearValue();
         await this.username.setValue(user);
         await this.password.clearValue();

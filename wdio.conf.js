@@ -3,6 +3,8 @@ export const config = {
   maxInstances: 1,
   specs: ['./test/specs/**/*.js'],
   baseUrl: 'https://www.saucedemo.com',
+  waitforTimeout: 10000,
+  connectionRetryTimeout: 120000,
   capabilities: [{
     browserName: 'chrome',
     'goog:chromeOptions': {
@@ -16,7 +18,7 @@ export const config = {
         '--disable-infobars',
         '--start-maximized',
         '--disable-extensions',
-        '--user-data-dir=C:/temp/chrome-profile-test123'
+        '--user-data-dir=C:/chrome/profile/test123'
       ],
       prefs: {
         'credentials_enable_service': false,
